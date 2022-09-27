@@ -1,41 +1,38 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    NavLink,
-    } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
+import image from '../image/RGP-icon.png';
 
 const Navbar = () => {
+
     const links = [
-      {
-        id: 1,
-        path: '/space-travelers',
-        text: 'Rockets',
-      },
-      {
-        id: 2,
-        path: '/missions',
-        text: 'Missions',
-      },
-      {
-        id: 3,
-        path: '/dragons',
-        text: 'Dragons',
-      },
-      {
-        id: 4,
-        path: '/myprofile',
-        text: 'My Profile',
-      },
-    ];
+        {
+          id: 1,
+          path: '/space-travelers',
+          text: 'Rockets',
+        },
+        {
+          id: 2,
+          path: '/missions',
+          text: 'Missions',
+        },
+        {
+          id: 3,
+          path: '/dragons',
+          text: 'Dragons',
+        },
+        {
+          id: 4,
+          path: '/myprofile',
+          text: 'My Profile',
+        },
+      ];
 
     return (
         <nav className="nav-bar">
-    
-          <div className="brand-logo-container">
+            <h1>Navbar</h1>
+       <div className="brand-logo-container">
             <img className="spacelogo" src={image} alt="spacelogo" />
             <h2 className="nav-brand">Space Travellers&apos; Hub</h2>
           </div>
@@ -48,7 +45,7 @@ const Navbar = () => {
               </li>
             ))}
     
-          </ul>
+          </ul> 
         </nav>
       );
     };
