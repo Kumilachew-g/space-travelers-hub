@@ -10,7 +10,7 @@ const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
     <NavBar />
     <Routes>
-      <Route path="/mission" element={<MissionsPage />} />
+      <Route path="/missions" element={<MissionsPage />} />
       <Route path="/profile" element={<ProfilePage />} />
       <Route path="*" element={<NoMatch />} />
     </Routes>
