@@ -1,11 +1,14 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import NavBar from './components/navigation/NavBar';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Space Travelers hub</h1>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <Router>
+      <NavBar />
+    </Router>
+  </>
+);
 
 export default App;
