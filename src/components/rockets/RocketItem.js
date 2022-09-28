@@ -19,7 +19,7 @@ function RocketItem(props) {
   };
 
   return (
-    <li key={id}>
+    <li key={id} className="li-rocket">
       <div className="rocket">
         <div className="image-container">
           <img src={flickrImages[0]} alt={name} />
