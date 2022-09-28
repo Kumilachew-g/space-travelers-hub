@@ -22,7 +22,7 @@ const NavBar = () => (
             Rockets
           </NavLink>
           <NavLink
-            to="/missions"
+            to="/"
             className="px-3 text-decoration-none"
             activeClassName="text-decoration-underline"
           >
