@@ -2,11 +2,11 @@ import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-// import rocketsReducer from './rockets/rocketsReducer';
+import reducerRockets from './rockets/rockets';
 import missionsReducer from './missions/missionsReducer';
 
 const rootReducer = combineReducers({
-  // rockets: rocketsReducer,
+  Rockets: reducerRockets,
   missions: missionsReducer,
 });
 
