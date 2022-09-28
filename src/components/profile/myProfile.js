@@ -1,7 +1,9 @@
-const myProfile = () => (
+import AllJoinedMissions from './JoinedMission';
+
+const ProfilePage = () => (
   <div>
-    <h1>My Profile</h1>
+    <AllJoinedMissions />
   </div>
 );
 
-export default myProfile;
+export default ProfilePage;
