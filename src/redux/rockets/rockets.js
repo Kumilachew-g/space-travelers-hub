@@ -1,5 +1,9 @@
 import APIServices from './APIServices';
-import { GET_ROCKET_DATA, ROCKET_RESERVATION, CANCEL_ROCKET_RESERVATION } from '../types';
+
+//Create Rocket ActionTypes
+export const GET_ROCKET_DATA = 'spacetravelers/rockets/GET_ROCKET_DATA';
+export const ROCKET_RESERVATION = 'spacetravelers/rockets/ROCKET_RESERVATION';
+export const CANCEL_ROCKET_RESERVATION = 'spacetravelers/rockets/CANCEL_ROCKET_RESERVATION';
 
 const initialState = [];
 let Loading = false;
