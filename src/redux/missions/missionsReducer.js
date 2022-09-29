@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import getAPI from '../getAPI';
+import getAPI from './getAPI';
 
 const FETCH_MISSIONS = 'spaceX/missions/FETCH_MISSIONS/fulfilled';
 const JOIN_MISSION = 'spaceX/missions/JOIN_MISSIONS';
