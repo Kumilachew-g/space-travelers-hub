@@ -23,7 +23,7 @@ const NavBar = () => (
           </NavLink>
           <NavLink
             to="/missions"
-            className="px-3 text-decoration-none"
+            className="px-2 text-decoration-none"
             activeClassName="text-decoration-underline"
           >
             Missions
