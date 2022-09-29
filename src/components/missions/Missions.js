@@ -36,10 +36,10 @@ const Mission = (props) => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th className="mission">Mission</th>
-          <th className="desc">Description</th>
-          <th className="status">Status</th>
-          <th className="actions"> </th>
+          <th className="th-mission">Mission</th>
+          <th className="th-desc">Description</th>
+          <th className="th-status">Status</th>
+          <th className="th-actions"> </th>
         </tr>
       </thead>
       <tbody>

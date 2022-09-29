@@ -19,10 +19,10 @@ const AllJoinedMissions = () => {
 
   return (
     <section>
+      <li className="list-group-item">
+        <h1>My Missions</h1>
+      </li>
       <ul className="list-group my-3">
-        <li className="list-group-item">
-          <h1>Missions</h1>
-        </li>
         {joinedMissions.length === 0 ? noReservedMission() : mapMissions}
       </ul>
     </section>
