@@ -1,28 +1,81 @@
 import PropTypes from 'prop-types';
-import { Table, Button } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { Table } from 'react-bootstrap';
+import {
+  joinMission,
+  leaveMission,
+} from '../../redux/missions/missionsReducer';
+import './Missions.css';
 
 const Mission = (props) => {
-  const { missionName, description } = props;
+  const {
+    id, reserved, missionName, description,
+  } = props;
+  const dispatch = useDispatch();
+  const missionList = useSelector((state) => state.missions.missionList);
+
+  const updateJoin = (value = false) => {
+    const returnJoinedMission = missionList.map((mission) => {
+      if (mission.mission_id !== id) {
+        return mission;
+      }
+      return { ...mission, reserved: value };
+    });
+    return returnJoinedMission;
+  };
+
+  const handleJoinMission = () => {
+    dispatch(joinMission(updateJoin(true)));
+  };
+
+  const handleLeaveMission = () => {
+    dispatch(leaveMission(updateJoin()));
+  };
 
   return (
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th> </th>
+          <th className="mission">Mission</th>
+          <th className="desc">Description</th>
+          <th className="status">Status</th>
+          <th className="actions"> </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{missionName}</td>
+          <td className="mission-names">{missionName}</td>
           <td>{description}</td>
-          <td>Not a member</td>
+          {reserved ? (
+            <td className="text-white">
+              <span className="bg-info rounded-pill px-2">Active Member</span>
+            </td>
+          ) : (
+            <td className="text-center">
+              {' '}
+              <span className="bg-secondary rounded-pill px-2">
+                NOT A MEMBER
+              </span>
+            </td>
+          )}
           <td>
-            {' '}
-            <Button>Join Mission</Button>
-            {' '}
+            {reserved ? (
+              <button
+                onClick={handleLeaveMission}
+                type="button"
+                className="btn btn-outline-danger"
+              >
+                Leave Mission
+              </button>
+            ) : (
+              <button
+                onClick={handleJoinMission}
+                type="button"
+                className="btn btn-outline-secondary"
+              >
+                Join Mission
+              </button>
+            )}
           </td>
         </tr>
       </tbody>
@@ -31,11 +84,15 @@ const Mission = (props) => {
 };
 
 Mission.propTypes = {
+  id: PropTypes.string,
+  reserved: PropTypes.bool,
   missionName: PropTypes.string,
   description: PropTypes.string,
 };
 
 Mission.defaultProps = {
+  id: '',
+  reserved: false,
   missionName: '',
   description: '',
 };
