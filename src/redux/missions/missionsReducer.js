@@ -15,7 +15,7 @@ export const fetchMission = createAsyncThunk(
   async () => {
     const result = await getAPI('https://api.spacexdata.com/v3/missions');
     return result;
-  }
+  },
 );
 
 export const joinMission = (payload) => ({
