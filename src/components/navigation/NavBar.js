@@ -12,7 +12,7 @@ const NavBar = () => (
           <img src={logo} alt="Logo" className="logo" />
           <h1>Space Travelers Hub</h1>
         </Navbar.Brand>
-        <Nav className="nav-links p-2">
+        <Nav className="nav-links p-3">
           <NavLink
             to="/"
             exact
@@ -23,7 +23,7 @@ const NavBar = () => (
           </NavLink>
           <NavLink
             to="/missions"
-            className="px-2 text-decoration-none"
+            className="px-3 text-decoration-none"
             activeClassName="text-decoration-underline"
           >
             Missions
