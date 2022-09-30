@@ -10,7 +10,7 @@
 .rocket .image-container {
   width: 300px;
   height: 200px;
-  margin-right: 20px;
+  margin: 25px;
 }
 
 .image-container img {
@@ -39,7 +39,7 @@
   background-color: #0290ff;
   border-radius: 3px;
   padding: 8px 20px;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 0.5px;
@@ -53,7 +53,7 @@
   border: 1px solid rgb(120, 116, 116);
   border-radius: 3px;
   padding: 8px 20px;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 0.5px;

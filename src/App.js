@@ -12,6 +12,7 @@ const App = () => (
     <NavBar />
     <Routes>
       <Route path="/" element={<Rockets />} />
+      <Route path="/rockets" element={<Rockets />} />
       <Route path="/missions" element={<MissionsPage />} />
       <Route path="/profile" element={<ProfileContainer />} />
       <Route path="*" element={<NoMatch />} />

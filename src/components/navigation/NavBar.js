@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../images/assets/planet.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './navBar.css';
 
 const NavBar = () => (
   <>
@@ -13,28 +14,34 @@ const NavBar = () => (
           <h1>Space Travelers Hub</h1>
         </Navbar.Brand>
         <Nav className="nav-links p-3">
-          <NavLink
-            to="/"
-            exact
-            className="text-decoration-none"
-            activeClassName="text-decoration-underline"
-          >
-            Rockets
-          </NavLink>
-          <NavLink
-            to="/missions"
-            className="px-3 text-decoration-none"
-            activeClassName="text-decoration-underline"
-          >
-            Missions
-          </NavLink>
-          <NavLink
-            to="/profile"
-            className="border-start px-2 border-dark text-decoration-none"
-            activeClassName="text-decoration-underline"
-          >
-            My Profile
-          </NavLink>
+          <Nav.Link>
+            <NavLink
+              to="/rockets"
+              exact
+              className="text-decoration-none navLink"
+              activeClassName="text-decoration-underline "
+            >
+              Rockets
+            </NavLink>
+          </Nav.Link>
+          <Nav.Link>
+            <NavLink
+              to="/missions"
+              className="px-2 text-decoration-none navLink"
+              activeClassName="text-decoration-underline"
+            >
+              Missions
+            </NavLink>
+          </Nav.Link>
+          <Nav.Link>
+            <NavLink
+              to="/profile"
+              className="border-start px-2 border-dark text-decoration-none navLink"
+              activeClassName="text-decoration-underline"
+            >
+              My Profile
+            </NavLink>
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
