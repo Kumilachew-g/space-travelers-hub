@@ -1,0 +1,8 @@
+.profile-list {
+  margin: auto;
+  max-width: 1200px;
+}
+
+.list-group-item {
+  width: 30vw;
+}
